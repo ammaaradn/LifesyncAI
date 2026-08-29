@@ -1,0 +1,20 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Everything a user owns lives under users/{uid}/... . A request is
+    // only allowed if it's authenticated AND the uid in the path matches
+    // the caller's own uid - so nobody can read or write another user's
+    // profile, tasks, or health logs.
+    match /users/{userId} {
+      allow read, write: if request.auth != null && request.auth.uid == userId;
+
+      match /tasks/{taskId} {
+        allow read, write: if request.auth != null && request.auth.uid == userId;
+      }
+
+      match /healthLogs/{logId} {
+        allow read, write: if request.auth != null && request.auth.uid == userId;
+      }
+    }
+  }
+}

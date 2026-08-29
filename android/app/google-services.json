@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "105905235168",
+    "project_id": "lifesync-ai-ca9d4",
+    "storage_bucket": "lifesync-ai-ca9d4.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:105905235168:android:ba0e7dd74d906542addc85",
+        "android_client_info": {
+          "package_name": "com.example.lifesync_ai"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDBcxw1gqZf_fGo0PjBGYZUrAUk6faaEQk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
